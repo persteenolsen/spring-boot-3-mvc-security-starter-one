@@ -1,4 +1,4 @@
-  # Spring Boot 3 JSP JPA MySQL Security
+  # Spring Boot 3 MVC Security JSP JPA MySQL - Basic Starter
 
 Last updated: 30-01-2025
 
