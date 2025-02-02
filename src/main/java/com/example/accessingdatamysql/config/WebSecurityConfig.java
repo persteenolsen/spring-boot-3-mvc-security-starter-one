@@ -71,7 +71,7 @@ public UserDetailsService userDetailsService(PasswordEncoder encoder) {
 
 			.authorizeHttpRequests((requests) -> requests
 			
-				.requestMatchers("/", "/hello", "/WEB-INF/**").permitAll()
+				.requestMatchers("/", "/demo/all", "/demo/add", "/hello", "/WEB-INF/**").permitAll()
 				
 				.anyRequest().authenticated()
 			)

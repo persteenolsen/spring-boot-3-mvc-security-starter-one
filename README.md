@@ -1,6 +1,6 @@
   # Spring Boot 3 MVC Security JSP JPA MySQL - Basic Starter
 
-Last updated: 01-02-2025
+Last updated: 02-02-2025
 
 - Works with Java 17
 
@@ -54,9 +54,8 @@ Add a new record to the MySQL:
 
 - Run the Web App locally at 8080
 
-- Open command Promt and run: curl http://localhost:8080/demo/add -d name=Second -d email=test@test.com
+- Open command Promt and run: curl http://localhost:8080/demo/add -d name=Hans -d email=hans@test.com
 
 # Things yet to be done for improvements
 
-- Create a Service Folder acording to the MVC patterns
 - Prepare the Web Applications to be deployed to Azure App Service using Java 17 and Tomcat 10.1
