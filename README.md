@@ -48,4 +48,12 @@ http://localhost:8080
 
 - You could make a JSP file to be included with the links for navigation
 
+- Add CSS
+
+- Add BootStrap for being mobile friendly
+
+- Improve the frontend validation
+
+- Add backend validation at the User Model
+
 - Prepare the Web Applications to be deployed to Azure App Service using Java 17 and Tomcat 10.1
