@@ -1,6 +1,6 @@
   # Spring Boot 3 MVC Security JSP JPA MySQL - Basic Starter
 
-Last updated: 02-02-2025
+Last updated: 04-02-2025
 
 - Works with Java 17
 
@@ -11,6 +11,8 @@ Last updated: 02-02-2025
 - JPA
 
 - MySQL
+
+- CRUD functionality
 
 - Download or fork the source code from GitHub
 
@@ -42,20 +44,8 @@ Show the JSP:
 
 http://localhost:8080
 
-Get All the Data by JSON :
-
-- Login
-
-- Open: http://localhost:8080/demo/all
-
-Add a new record to the MySQL:
-
-- Login
-
-- Run the Web App locally at 8080
-
-- Open command Promt and run: curl http://localhost:8080/demo/add -d name=Hans -d email=hans@test.com
-
 # Things yet to be done for improvements
+
+- You could make a JSP file to be included with the links for navigation
 
 - Prepare the Web Applications to be deployed to Azure App Service using Java 17 and Tomcat 10.1

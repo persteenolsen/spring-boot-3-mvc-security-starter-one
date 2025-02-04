@@ -71,7 +71,15 @@ public UserDetailsService userDetailsService(PasswordEncoder encoder) {
 
 			.authorizeHttpRequests((requests) -> requests
 			
-				.requestMatchers("/", "/demo/all", "/demo/add", "/hello", "/WEB-INF/**").permitAll()
+				.requestMatchers("/", 
+				"/hello", 
+				"/demo/mvclistpersons/**", 
+
+				// Only allowed when logged in !
+				//"/demo/mvcdeleteperson/**",
+				//"/demo/mvcupdateperson/**",  
+				//"/demo/mvccreateperson",
+				"/WEB-INF/**").permitAll()
 				
 				.anyRequest().authenticated()
 			)

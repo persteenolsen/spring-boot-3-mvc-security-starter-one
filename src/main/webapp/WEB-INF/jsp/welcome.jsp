@@ -1,4 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+
+     
+<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -6,13 +11,22 @@
 </head>
 <body>
 
- <br />
-   <a href = "/logout" target="_top">Logout</a>
- <br />
+  <sec:authorize access="isAuthenticated()">
+    <a href="/logout">Logout</a>
+  </sec:authorize>
+  <sec:authorize access="!isAuthenticated()">
+    <a href="/login">Login</a>
+   </sec:authorize>
 
-<h1>Welcome: user</h1>
+   <br /><br />
+  
+  <sec:authorize access="isAuthenticated()">
+   Welcome <i><b><sec:authentication property="name"/></b></i> 
+  - you are authorized to administrate the list of persons !</b>
+  </sec:authorize>
 
-<a href="/demo/all" target="_blank">View the secret JSON Data</a>
+<br /><br />
+<a href="/demo/mvclistpersons" target="_top">View the Persons</a>
 
 </body>
 </html>
