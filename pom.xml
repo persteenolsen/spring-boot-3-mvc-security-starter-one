@@ -11,6 +11,10 @@
 	<groupId>com.example</groupId>
 	<artifactId>accessing-data-mysql-complete</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
+    
+	<!--Making a war package for deploy to Tomcat-->
+	<packaging>war</packaging>
+
 	<name>accessing-data-mysql-complete</name>
 	<description>Demo project for Spring Boot</description>
 	<properties>

@@ -1,6 +1,6 @@
   # Spring Boot 3 MVC Security JSP JPA MySQL - Basic Starter
 
-Last updated: 04-02-2025
+Last updated: 05-02-2025
 
 - Works with Java 17
 
@@ -17,6 +17,8 @@ Last updated: 04-02-2025
 - Download or fork the source code from GitHub
 
 - Make sure that you have a MySQL Server online
+
+- The Web Applications is prepared to be deployed to Azure App Service using Java 17 and Tomcat 10.1
 
 # Create the file application.properties with the content below and place the file in the resources folder
 
@@ -56,4 +58,3 @@ http://localhost:8080
 
 - Add backend validation at the User Model
 
-- Prepare the Web Applications to be deployed to Azure App Service using Java 17 and Tomcat 10.1
