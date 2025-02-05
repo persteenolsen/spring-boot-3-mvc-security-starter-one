@@ -9,27 +9,27 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import org.springframework.stereotype.Service;
  
-import com.example.accessingdatamysql.model.User;
-import com.example.accessingdatamysql.dao.UserRepository;
+import com.example.accessingdatamysql.model.Person;
+import com.example.accessingdatamysql.dao.PersonRepository;
  
 @Service
 public class PersonService {
  
     @Autowired
-    UserRepository userRepo;
+    PersonRepository personRepo;
     
     
     // --------------------------------These methods are used by the MVC Controller----------------------------
     // This method is getting all of the Persons
-    public List<User> getAll() {
-        return (List<User>) userRepo.findAll();
+    public List<Person> getAll() {
+        return (List<Person>) personRepo.findAll();
     }
  
     // This method get a Person by Id
-    public User getPersonById(long id) {
+    public Person getPersonById(long id) {
 
-        User person = null;
-        Optional<User> searchEntity = userRepo.findById(id);
+        Person person = null;
+        Optional<Person> searchEntity = personRepo.findById(id);
         if (searchEntity.isPresent()) 
             person = searchEntity.get();
          else 
@@ -38,13 +38,13 @@ public class PersonService {
        }
        
        // This method is used by Update + Create
-       public void saveOrUpdate(User user) {
-          userRepo.save(user);
+       public void saveOrUpdate(Person person) {
+          personRepo.save(person);
        }
     
        // This method is used to delete a person by Id
        public void deletePerson(long id) {
-          userRepo.deleteById(id);
+          personRepo.deleteById(id);
        }
     
   

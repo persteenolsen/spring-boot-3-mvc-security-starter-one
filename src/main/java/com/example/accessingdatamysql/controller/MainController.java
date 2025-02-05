@@ -17,7 +17,7 @@ import org.springframework.security.web.csrf.CsrfToken;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 
-import com.example.accessingdatamysql.model.User;
+import com.example.accessingdatamysql.model.Person;
 import com.example.accessingdatamysql.service.PersonService;
 
 @Controller
@@ -62,7 +62,7 @@ public class MainController {
 	public ModelAndView getAllUsers() {
 		
 		ModelAndView model = new ModelAndView("person_list");
-		List<User> personList = personService.getAll();
+		List<Person> personList = personService.getAll();
 		model.addObject("personList", personList);
 
 		return model;
@@ -75,7 +75,7 @@ public class MainController {
 	public ModelAndView editPerson(@PathVariable long id) {
 
 	 ModelAndView model = new ModelAndView();
-	 User person = personService.getPersonById(id);
+	 Person person = personService.getPersonById(id);
 	 model.addObject("personForm", person);
 	 model.setViewName("person_form");
 	 
@@ -87,7 +87,7 @@ public class MainController {
 	public ModelAndView createPerson() {
 
 	 ModelAndView model = new ModelAndView();
-	 User person = new User();
+	 Person person = new Person();
 	 model.addObject("personForm", person);
 	 model.setViewName("person_form");
 	 
@@ -97,7 +97,7 @@ public class MainController {
 	// This method save the data of the Person entered in the Form by Update or Create
 	// and display Errors if any or redirect to the JSP View with the list of persons if success
 	@RequestMapping(value="/demo/mvcsaveperson", method=RequestMethod.POST)
-	public String save( @ModelAttribute("personForm") User person, BindingResult bindingResult) {
+	public String save( @ModelAttribute("personForm") Person person, BindingResult bindingResult) {
 	
 		if (bindingResult.hasErrors()) {
 			
