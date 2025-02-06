@@ -11,26 +11,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
-import jakarta.servlet.http.HttpServletRequest;
-
-import org.springframework.security.web.csrf.CsrfToken;
-import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 
 import com.example.accessingdatamysql.model.Person;
 import com.example.accessingdatamysql.service.PersonService;
 
-@Controller
-class LoginController {
-    @GetMapping("/login")
-    String loginPage(Model model, HttpServletRequest request) {
-        CsrfToken csrfToken = (CsrfToken) request.getAttribute(CsrfToken.class.getName());
-        if (csrfToken != null) {
-            model.addAttribute("_csrf", csrfToken);
-        }
-        return "login";
-    }
-}
 
 // Returning the JSP hello View
 @Controller
