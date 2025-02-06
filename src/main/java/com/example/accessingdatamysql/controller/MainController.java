@@ -29,7 +29,7 @@ class HelloController {
 // Returning the JSP About View
 @Controller
 class AboutController {
-	@GetMapping({"/", "/about"})
+	@GetMapping("/about")
 	public String about() {
 		return "about";
 	}
@@ -38,7 +38,7 @@ class AboutController {
 // Returning the Secure JSP welcome View
 @Controller
 class WelcomeController {
-	@GetMapping(path="/welcome")
+	@GetMapping("/welcome")
 	public String welcome() {
 		return "welcome";
 	}
