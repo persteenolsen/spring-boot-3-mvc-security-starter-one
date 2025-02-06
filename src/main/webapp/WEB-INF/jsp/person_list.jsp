@@ -14,18 +14,25 @@
      
   <title>The list of persons</title>
   
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <style>
+	   .body-content{font-size: 10pt;margin-left: 10pt; margin-right: 10pt; font-family: Verdana, sans-serif}
+	</style>
+  
 </head>
 
 
-<body>
+<body class="body-content">
  
   <div>
     
     <jsp:include page="header_menu.jsp" />
 
-    <br />
+    <h2>The List of Persons</h2>
 
-  <table>
+    <table cellpadding="5" cellspacing="2">
    <thead>
     <th scope="row">Name</th>
     <th scope="row">Email</th>

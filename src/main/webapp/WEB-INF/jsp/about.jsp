@@ -3,13 +3,20 @@
 <html>
 <head>
     <title>Spring Boot About this Web Application</title>
+	
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <style>
+	   .body-content{font-size: 10pt;margin-left: 10pt; margin-right: 10pt; font-family: Verdana, sans-serif}
+	</style>
+
 </head>
-<body>
+<body class="body-content">
 
     <jsp:include page="header_menu.jsp" />
-    
-
-<h1>About this Web Application</h1>
+ 
+<h2>About this Web Application</h2>
 
 Last updated: 06-02-2025
 
@@ -69,6 +76,6 @@ Make sure that you have a MySQL Server online
 
 </ul>
 
-
+</div>
 </body>
 </html>

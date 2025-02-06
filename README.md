@@ -10,6 +10,8 @@ Last updated: 06-02-2025
 
 - JSP
 
+- Basic mobile friendly and css
+
 - JPA
 
 - MySQL
@@ -54,9 +56,9 @@ http://localhost:8080
 
 # Things yet to be done for improvements
 
-- Add CSS
+- Add better CSS
 
-- Add BootStrap for being mobile friendly
+- Add better BootStrap for being mobile friendly
 
 - Improve the frontend validation
 
