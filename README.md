@@ -1,6 +1,6 @@
   # Spring Boot 3 MVC Security JSP JPA MySQL - Basic Starter
 
-Last updated: 05-02-2025
+Last updated: 06-02-2025
 
 - Works with Java 17
 
@@ -13,6 +13,8 @@ Last updated: 05-02-2025
 - MySQL
 
 - CRUD functionality
+
+- A simple JSP file included with links for menu navigation
 
 - Download or fork the source code from GitHub
 
@@ -47,8 +49,6 @@ Show the JSP:
 http://localhost:8080
 
 # Things yet to be done for improvements
-
-- You could make a JSP file to be included with the links for navigation
 
 - Add CSS
 

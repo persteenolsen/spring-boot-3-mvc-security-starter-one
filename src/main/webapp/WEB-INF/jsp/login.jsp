@@ -15,10 +15,7 @@ pageEncoding="ISO-8859-1"%>
 </head>
 <body>
 
-	
-<br />
-<a href = "/hello" target="_top">Hello Page</a>
-<br />
+   <jsp:include page="header_menu.jsp" />
 
 
 	<div class="container"  style="margin-left: 5pt">
@@ -44,6 +41,7 @@ pageEncoding="ISO-8859-1"%>
 
           </div>
 
+         <br />
          
          <input class="btn btn-primary" name="submit" type="submit" value="Submit" />
            

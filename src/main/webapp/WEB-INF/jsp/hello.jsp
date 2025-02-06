@@ -6,9 +6,8 @@
 </head>
 <body>
 
-<br />
-<a href = "/login" target="_top">Login Page</a>
-<br />
+    <jsp:include page="header_menu.jsp" />
+    
 
 <h1>Hello World from Spring Boot 3 + JSP + JPA + MySQL</h1>
 

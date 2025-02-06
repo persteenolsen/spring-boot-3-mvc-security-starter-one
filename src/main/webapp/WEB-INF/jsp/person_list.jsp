@@ -21,18 +21,9 @@
  
   <div>
     
-  <sec:authorize access="isAuthenticated()">
-    <a href="/logout">Logout</a>
-  </sec:authorize>
-  <sec:authorize access="!isAuthenticated()">
-    <a href="/login">Login</a>
-   </sec:authorize>
+    <jsp:include page="header_menu.jsp" />
 
-   <br />
-   <br />
-  <a href="/welcome" target="_top">Welome Page</a>
-  <br />
-  <br />
+    <br />
 
   <table>
    <thead>

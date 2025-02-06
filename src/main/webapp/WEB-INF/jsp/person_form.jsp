@@ -16,19 +16,7 @@
 </head>
 <body>
 
-    
-    <sec:authorize access="isAuthenticated()">
-        <a href="/logout">Logout</a>
-      </sec:authorize>
-      <sec:authorize access="!isAuthenticated()">
-        <a href="/login">Login</a>
-       </sec:authorize>
-    
-       <br /><br />
-      <a href="/welcome" target="_top">Welome Page</a>
-      <br /><br />
-      <a href="/demo/mvclistpersons" target="_top">Show Persons</a>
-      <br />
+    <jsp:include page="header_menu.jsp" />
 
  <div class="container"  style="margin-left: 5pt">
   <spring:url value="/demo/mvcsaveperson" var="saveURL" />
