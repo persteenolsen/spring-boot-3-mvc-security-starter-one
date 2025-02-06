@@ -12,7 +12,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import org.springframework.security.web.csrf.CsrfToken;
+ // Note: Only needed in POST method used when csrf is enbled in Security config 
+//import org.springframework.security.web.csrf.CsrfToken;
  
 @Controller
 public class LoginController
@@ -29,11 +30,11 @@ public class LoginController
                        errorMessge = "You have been logged out successfully!";
                     }
                     
-                    // Maybe not needed for the hidden input 
-                    CsrfToken csrfToken = (CsrfToken) request.getAttribute(CsrfToken.class.getName());
-                    if (csrfToken != null) {
-                        model.addAttribute("_csrf", csrfToken);
-                    }
+                    // Note: Only needed in POST method used when csrf is enbled in Security config 
+                    // CsrfToken csrfToken = (CsrfToken) request.getAttribute(CsrfToken.class.getName());
+                    //if (csrfToken != null) {
+                    //    model.addAttribute("_csrf", csrfToken);
+                    //}
 
                     model.addAttribute("errorMessge", errorMessge);
                     return "login";

@@ -66,8 +66,8 @@ public UserDetailsService userDetailsService(PasswordEncoder encoder) {
 		
 		http
 		     
-		    // Note: This is needed form the costum login form to work !!!
-		    .csrf(csrf -> csrf.disable()) 
+		    // Note: If csrf is enabled ( the default ) a POST form + POST Controller is needed
+			.csrf(csrf -> csrf.disable()) 
 
 			.authorizeHttpRequests((requests) -> requests
 			
