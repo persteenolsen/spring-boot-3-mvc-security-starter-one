@@ -6,6 +6,8 @@ Last updated: 06-02-2025
 
 - Spring Boot 3
 
+- Maven as build tool
+
 - JSP
 
 - JPA
@@ -15,6 +17,8 @@ Last updated: 06-02-2025
 - CRUD functionality
 
 - A simple JSP file included with links for menu navigation
+
+- DevTools with Hot Reload when developing 
 
 - Download or fork the source code from GitHub
 

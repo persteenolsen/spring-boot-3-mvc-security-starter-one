@@ -10,8 +10,7 @@ pageEncoding="ISO-8859-1"%>
 <head>
     
 	<title>A Java Spring Boot MVC JSP JPA example</title>
-	
-	
+		
 </head>
 <body>
 
@@ -20,23 +19,26 @@ pageEncoding="ISO-8859-1"%>
 
 	<div class="container"  style="margin-left: 5pt">
       
+      <c:if test="${not empty errorMessge}"><div style="color:red; font-weight: bold; margin: 5px 0px;">${errorMessge}</div></c:if>
+      
+      <br />
 
-      <c:if test="${not empty errorMessge}"><div style="color:red; font-weight: bold; margin: 30px 0px;">${errorMessge}</div></c:if>
- 
       <form name='login' action="/login" method='POST'>
-         
-    <input type="hidden" name="{{_csrf.parameterName}}" value="{{_csrf.token}}"/>
+
+        <input type="hidden" name="{{_csrf.parameterName}}" value="{{_csrf.token}}"/>
          
            <div class="form-group">
             
-                <label for="username">Username: (user)</label>
+                <label for="username">Username: (user)</label><br />
                 <input class="form-control" type='text' name='username' value=''>
               
            </div>
               
+           <br />
+
           <div class="form-group">
               
-             <label for="password">Password: (persteen1967)</label>
+             <label for="password">Password: (persteen1967)</label><br />
              <input class="form-control" type='password' name='password' />
 
           </div>

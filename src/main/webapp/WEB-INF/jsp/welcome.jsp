@@ -13,5 +13,9 @@
 
   <jsp:include page="header_menu.jsp" />
 
+  <br />
+  
+  Welcome to the "secret" section :-)
+
 </body>
 </html>

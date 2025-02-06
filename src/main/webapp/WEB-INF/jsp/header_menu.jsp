@@ -11,7 +11,10 @@
                         <a href="/hello">Home</a> -
                     </td>
                                    
-                     
+                    <td>
+                        <a href="/about">About</a> -
+                    </td>
+
                    <sec:authorize access="isAuthenticated()">
                      
                     <td>

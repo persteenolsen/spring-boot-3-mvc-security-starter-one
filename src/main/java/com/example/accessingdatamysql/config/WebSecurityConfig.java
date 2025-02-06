@@ -72,7 +72,8 @@ public UserDetailsService userDetailsService(PasswordEncoder encoder) {
 			.authorizeHttpRequests((requests) -> requests
 			
 				.requestMatchers("/", 
-				"/hello", 
+				"/hello",
+				"/about", 
 				"/demo/mvclistpersons/**", 
 
 				// Only allowed when logged in !

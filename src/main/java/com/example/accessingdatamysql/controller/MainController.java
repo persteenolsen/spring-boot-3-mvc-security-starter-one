@@ -26,7 +26,16 @@ class HelloController {
 	}
 }
 
-// Returning the JSP welcome View
+// Returning the JSP About View
+@Controller
+class AboutController {
+	@GetMapping({"/", "/about"})
+	public String about() {
+		return "about";
+	}
+}
+
+// Returning the Secure JSP welcome View
 @Controller
 class WelcomeController {
 	@GetMapping(path="/welcome")
