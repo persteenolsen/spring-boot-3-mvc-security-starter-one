@@ -1,6 +1,6 @@
   # Spring Boot 3 MVC Security JSP JPA MySQL - Basic Starter
 
-Last updated: 06-02-2025
+Last updated: 07-02-2025
 
 - Works with Java 17
 
