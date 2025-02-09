@@ -31,6 +31,10 @@ Last updated: 09-02-2025
 </li>
 
 <li>
+    Spring Security
+ </li>
+
+<li>
    Maven as build tool
  </li>
 

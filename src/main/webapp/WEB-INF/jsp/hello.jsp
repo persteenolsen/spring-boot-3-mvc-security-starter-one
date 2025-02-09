@@ -18,7 +18,7 @@
     <jsp:include page="header_menu.jsp" />
     
 
-<h2>Hello World from Spring Boot 3 + MVC + JSP + JPA + MySQL</h2>
+<h2>Hello World from Spring Boot 3 + Security + MVC + JSP + JPA + MySQL</h2>
 
 </body>
 </html>
