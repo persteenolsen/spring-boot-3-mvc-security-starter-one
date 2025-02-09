@@ -23,6 +23,7 @@
 
 	<dependencies>
         
+		<!--Include Starters like Web, JSON, Tomcat and -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
@@ -46,11 +47,13 @@
 			<artifactId>tomcat-embed-jasper</artifactId>
 			<scope>provided</scope>
 		</dependency>
-		<dependency>
+
+	  <!--Note: Not needed here because already include by spring-boot-starter-web-->
+	  <!--<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-tomcat</artifactId>
 			<scope>provided</scope>
-		</dependency>
+	  </dependency>-->
 		
 	   <!--JSP - Taglibs for Security-->
       <dependency>
