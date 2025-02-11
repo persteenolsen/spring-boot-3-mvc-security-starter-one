@@ -32,7 +32,7 @@ pageEncoding="ISO-8859-1"%>
 
       <form name='login' action="/login" method='POST'>
 
-        <input type="hidden" name="{{_csrf.parameterName}}" value="{{_csrf.token}}"/>
+        <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
          
            <div class="form-group">
             

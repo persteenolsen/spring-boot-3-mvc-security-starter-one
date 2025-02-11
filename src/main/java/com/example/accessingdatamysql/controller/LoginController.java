@@ -6,6 +6,7 @@ import jakarta.servlet.http.HttpServletResponse;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.web.authentication.logout.SecurityContextLogoutHandler;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -30,11 +31,11 @@ public class LoginController
                        errorMessge = "You have been logged out successfully!";
                     }
                     
-                    // Note: Only needed in POST method used when csrf is enbled in Security config 
-                    // CsrfToken csrfToken = (CsrfToken) request.getAttribute(CsrfToken.class.getName());
-                    //if (csrfToken != null) {
-                    //    model.addAttribute("_csrf", csrfToken);
-                    //}
+                    // Note: Only needed when csrf is enbled in Security config ( By default )
+                   //  CsrfToken csrfToken = (CsrfToken) request.getAttribute(CsrfToken.class.getName());
+                   // if (csrfToken != null) {
+                   //     model.addAttribute("_csrf", csrfToken);
+                   // }
 
                     model.addAttribute("errorMessge", errorMessge);
                     return "login";
@@ -43,9 +44,12 @@ public class LoginController
          @RequestMapping(value="/logout", method = RequestMethod.GET)
          public String logoutPage (HttpServletRequest request, HttpServletResponse response) {
              Authentication auth = SecurityContextHolder.getContext().getAuthentication();
-                 if (auth != null){   
-                     new SecurityContextLogoutHandler().logout(request, response, auth);
+                if (auth != null){   
+                  
+                   new SecurityContextLogoutHandler().logout(request, response, auth);
+                  //  new SecurityContextLogoutHandler().isInvalidateHttpSession();
                  }
+                 
                  return "redirect:/login?logout=true";
              }
   }

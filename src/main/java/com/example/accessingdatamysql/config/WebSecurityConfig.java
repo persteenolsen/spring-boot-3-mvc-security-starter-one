@@ -13,6 +13,9 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 import org.springframework.security.web.SecurityFilterChain;
+import org.springframework.security.web.authentication.logout.CookieClearingLogoutHandler;
+import org.springframework.security.web.csrf.CsrfTokenRepository;
+import org.springframework.security.web.csrf.HttpSessionCsrfTokenRepository;
 
 
 @Configuration
@@ -21,7 +24,22 @@ public class WebSecurityConfig {
   
    // Note: This is the password persteen1967 bcrypted 
    private String ENCODED_PASSWORD = "$2a$10$BU4mPFHW8stXWMVH8clcZ.yZ7wl54oJq.f0Lu2HnUK6.WdooEoTZ2";
-    
+       
+	// Configure the CSRF token repository for protection against CSRF Attacks
+	private CsrfTokenRepository csrfTokenRepository() {
+
+        // Create a new HttpSessionCsrfTokenRepository
+        HttpSessionCsrfTokenRepository repository = new HttpSessionCsrfTokenRepository();
+
+        // Set the session attribute name for the CSRF token in a hidden input auto created
+	    // Note: Take a look in login form by html source 
+        repository.setSessionAttributeName("_csrf");
+
+        // Return the repository
+        return repository;
+    }
+
+
    @Bean
    public PasswordEncoder passwordEncoder() {
        return new BCryptPasswordEncoder();
@@ -63,12 +81,20 @@ public UserDetailsService userDetailsService(PasswordEncoder encoder) {
    @Bean
 	public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
 		
-		
-		http
-		     
-		    // Note: If csrf is enabled ( the default ) a POST form + POST Controller is needed
-			.csrf(csrf -> csrf.disable()) 
+		// Note: Does not delete the cookie, but the cookie value does change
+		CookieClearingLogoutHandler cookies = new CookieClearingLogoutHandler("JSESSIONID");
 
+		http
+		    
+		    // To protect against CSRF Attacks
+			.csrf((csrf) -> csrf
+
+			// Make a call for create a csrf and set it in a auto generated hidden input 
+			.csrfTokenRepository(csrfTokenRepository()))
+		   
+			// Note: This will disable the csrf !!!
+			//.csrf(csrf -> csrf.disable())  
+		   
 			.authorizeHttpRequests((requests) -> requests
 			
 				.requestMatchers("/", 
@@ -95,7 +121,13 @@ public UserDetailsService userDetailsService(PasswordEncoder encoder) {
 
 				.permitAll()
 			)
-			.logout((logout) -> logout.permitAll()
+			.logout((logout) -> 
+			         
+			        // Note: Does not delete the cookie but the cookie value does change
+					logout.addLogoutHandler(cookies)
+			        //logout.deleteCookies("JSESSIONID")
+			  
+			          .permitAll()
 			);			
 
 		return http.build(); 

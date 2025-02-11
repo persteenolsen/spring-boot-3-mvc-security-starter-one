@@ -22,13 +22,25 @@
                     </td> 
                     
                     <td>
-                        <a href="/demo/mvclistpersons">Show persons</a> -
+                        <a href="/demo/mvclistpersons">Show persons</a>
                    </td>
 
-                   <td>
+                  <!-- <td>
                       <a href="/logout">Logout</a>
-                   </td>
+                   </td> -->
+                   
+                   <td><div style="width:25px"></div></td>
+                   <td>
+                                       
+                    <form name='logout' action="/logout" method='POST'>
 
+                        <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+                        <br />
+                       <input class="btn btn-primary" name="submit" type="submit" value="Logout" />
+           
+                     </form>
+
+                   </td>
 
                    </sec:authorize>
                    <sec:authorize access="!isAuthenticated()">

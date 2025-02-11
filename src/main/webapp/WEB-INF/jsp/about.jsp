@@ -18,7 +18,7 @@
  
 <h2>About this Web Application</h2>
 
-Last updated: 09-02-2025
+Last updated: 11-02-2025
 
 <ul>
 
@@ -33,6 +33,8 @@ Last updated: 09-02-2025
 <li>
     Spring Security
  </li>
+
+ <li>CSRF protection enabled</li>
 
 <li>
    Maven as build tool
