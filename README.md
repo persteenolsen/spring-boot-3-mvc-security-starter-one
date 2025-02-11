@@ -8,6 +8,8 @@ Last updated: 11-02-2025
 
 - Spring Security
 
+- CSRF Protected
+
 - Maven as build tool
 
 - JSP
