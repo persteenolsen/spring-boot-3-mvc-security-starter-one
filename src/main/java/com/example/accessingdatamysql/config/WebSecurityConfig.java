@@ -81,7 +81,9 @@ public UserDetailsService userDetailsService(PasswordEncoder encoder) {
    @Bean
 	public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
 		
-		// Note: Does not delete the cookie, but the cookie value does change
+		// Note: This is just a TEST
+		// The Session Cookie will still be present, because even after a Logout, it will be created
+		// by Spring but with a new value :-)
 		CookieClearingLogoutHandler cookies = new CookieClearingLogoutHandler("JSESSIONID");
 
 		http
@@ -102,7 +104,17 @@ public UserDetailsService userDetailsService(PasswordEncoder encoder) {
 				"/about", 
 				"/demo/mvclistpersons/**", 
 
-				// Only allowed when logged in !
+				// Note: Spring Cookie - Just for testing Cookies 
+				"/create-spring-cookie",
+				"/delete-spring-cookie",
+				"/read-spring-cookie",
+
+				// Note: Servlet Cookie - Just for testing Cookies 
+				"/create-servlet-cookie",
+				"/delete-servlet-cookie",
+				"/all-servlet-cookies",
+                
+				// Note: For testing only
 				//"/demo/mvcdeleteperson/**",
 				//"/demo/mvcupdateperson/**",  
 				//"/demo/mvccreateperson",
@@ -123,11 +135,15 @@ public UserDetailsService userDetailsService(PasswordEncoder encoder) {
 			)
 			.logout((logout) -> 
 			         
-			        // Note: Does not delete the cookie but the cookie value does change
+			        // Note: This is just a TEST
+		            // The Session Cookie will still be present, because even after a Logout, 
+					// it will be created by Spring but with a new value :-)
 					logout.addLogoutHandler(cookies)
-			        //logout.deleteCookies("JSESSIONID")
+			        
+					// Note: Not needed
+					//logout.deleteCookies("JSESSIONID")
 			  
-			          .permitAll()
+			       .permitAll()
 			);			
 
 		return http.build(); 

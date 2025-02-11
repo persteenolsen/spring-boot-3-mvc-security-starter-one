@@ -56,6 +56,15 @@ JPA
 CRUD functionality
 </li>
 
+
+<li>
+ Learning about Spring Cookies - Take a look at SpringCookieController.java
+</li>
+
+<li>
+ Learning about Servlet Cookies - Take a look at ServletCookieController.java
+</li>
+
 <li>
 A simple JSP file included with links for menu navigation
 </li>

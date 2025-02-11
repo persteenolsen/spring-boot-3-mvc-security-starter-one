@@ -13,7 +13,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
- // Note: Only needed in POST method used when csrf is enbled in Security config 
+// Note: Implemented by WebSecurityConfig.java
+// Only needed when csrf is enbled in Security config ( By default )
 //import org.springframework.security.web.csrf.CsrfToken;
  
 @Controller
@@ -31,11 +32,12 @@ public class LoginController
                        errorMessge = "You have been logged out successfully!";
                     }
                     
-                    // Note: Only needed when csrf is enbled in Security config ( By default )
-                   //  CsrfToken csrfToken = (CsrfToken) request.getAttribute(CsrfToken.class.getName());
-                   // if (csrfToken != null) {
-                   //     model.addAttribute("_csrf", csrfToken);
-                   // }
+                    // Note: Implemented by WebSecurityConfig.java
+                    // Only needed when csrf is enbled in Security config ( By default )
+                    //  CsrfToken csrfToken = (CsrfToken) request.getAttribute(CsrfToken.class.getName());
+                    // if (csrfToken != null) {
+                    //     model.addAttribute("_csrf", csrfToken);
+                    // }
 
                     model.addAttribute("errorMessge", errorMessge);
                     return "login";

@@ -22,6 +22,10 @@ Last updated: 11-02-2025
 
 - CRUD functionality
 
+- Learning about Spring Cookies - Take a look at SpringCookieController.java
+
+- Learning about Servlet Cookies - Take a look at ServletCookieController.java
+
 - A simple JSP file included with links for menu navigation
 
 - DevTools with Hot Reload when developing 
@@ -67,4 +71,25 @@ http://localhost:8080
 - Improve the frontend validation
 
 - Add backend validation at the User Model
+
+# For learning about Spring Cookies try hit these public endpoints
+ 
+- http://localhost:8080/create-spring-cookie
+
+- http://localhost:8080/delete-spring-cookie
+
+- http://localhost:8080/read-spring-cookie
+
+
+# For learning about Servlet Cookies try hit these public endpoints
+
+- http://localhost:8080/create-servlet-cookie
+
+- http://localhost:8080/delete-servlet-cookie
+
+- http://localhost:8080/all-servlet-cookies
+
+Happy Cookie learning :-)
+
+
 
