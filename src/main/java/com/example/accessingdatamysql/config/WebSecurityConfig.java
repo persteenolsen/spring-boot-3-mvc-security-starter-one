@@ -102,8 +102,7 @@ public UserDetailsService userDetailsService(PasswordEncoder encoder) {
 				.requestMatchers("/", 
 				"/hello",
 				"/about", 
-				"/demo/mvclistpersons/**", 
-
+								
 				// Note: Spring Cookie - Just for testing Cookies 
 				"/create-spring-cookie",
 				"/delete-spring-cookie",
@@ -115,6 +114,7 @@ public UserDetailsService userDetailsService(PasswordEncoder encoder) {
 				"/all-servlet-cookies",
                 
 				// Note: For testing only
+				//"/demo/mvclistpersons/**", 
 				//"/demo/mvcdeleteperson/**",
 				//"/demo/mvcupdateperson/**",  
 				//"/demo/mvccreateperson",

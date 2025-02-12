@@ -22,8 +22,15 @@ public class SpringCookieController {
 		            .maxAge(1 * 24 * 60 * 60)
 		            .domain("localhost")
 		            .build();
-
-	        return ResponseEntity.ok().header(HttpHeaders.SET_COOKIE, resCookie.toString()).build();
+            
+			// Returning HTTP Header + Body
+			return ResponseEntity.ok()
+			.header(HttpHeaders.SET_COOKIE, resCookie.toString())
+			.body("The Cookie: " + resCookie.getName() 
+			      + " with value: " + resCookie.getValue() + " was created ..." );
+            
+			// Returning HTTP Header
+	        //return ResponseEntity.ok().header(HttpHeaders.SET_COOKIE, resCookie.toString()).build();
 
 	    }
 
@@ -47,8 +54,15 @@ public class SpringCookieController {
 			 .domain("localhost")
 
 			 .build();
-
-		     return ResponseEntity.ok().header(HttpHeaders.SET_COOKIE, resCookie.toString()).build();
+                        
+			// Returning HTTP Header + Body
+			return ResponseEntity.ok()
+			      .header(HttpHeaders.SET_COOKIE, resCookie.toString())
+				  .body("The Cookie: " + resCookie.getName() + " was deleted ...");
+				 // .build();
+	        
+			// Returning HTTP Header
+		    // return ResponseEntity.ok().header(HttpHeaders.SET_COOKIE, resCookie.toString()).build();
 
 	    }
 	    

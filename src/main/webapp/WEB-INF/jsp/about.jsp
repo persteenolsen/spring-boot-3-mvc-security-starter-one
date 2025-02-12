@@ -18,7 +18,7 @@
  
 <h2>About this Web Application</h2>
 
-Last updated: 11-02-2025
+Last updated: 12-02-2025
 
 <ul>
 
