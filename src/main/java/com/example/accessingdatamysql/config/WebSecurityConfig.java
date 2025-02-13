@@ -13,10 +13,12 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 import org.springframework.security.web.SecurityFilterChain;
-import org.springframework.security.web.authentication.logout.CookieClearingLogoutHandler;
+
+// Note: This is just a TEST about sesson cookie was a cookie
+//import org.springframework.security.web.authentication.logout.CookieClearingLogoutHandler;
+
 import org.springframework.security.web.csrf.CsrfTokenRepository;
 import org.springframework.security.web.csrf.HttpSessionCsrfTokenRepository;
-
 
 @Configuration
 @EnableWebSecurity
@@ -81,10 +83,11 @@ public UserDetailsService userDetailsService(PasswordEncoder encoder) {
    @Bean
 	public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
 		
-		// Note: This is just a TEST
-		// The Session Cookie will still be present, because even after a Logout, it will be created
+		// Note: This is just a TEST that could be relevant if the sesson cookie was a cookie
+		// to be stored by the Browser ( maxage > 0 )
+		// The Session Cookie will still be present, because after a Logout, it will be created
 		// by Spring but with a new value :-)
-		CookieClearingLogoutHandler cookies = new CookieClearingLogoutHandler("JSESSIONID");
+		//CookieClearingLogoutHandler cookies = new CookieClearingLogoutHandler("JSESSIONID");
 
 		http
 		    
@@ -135,15 +138,16 @@ public UserDetailsService userDetailsService(PasswordEncoder encoder) {
 			)
 			.logout((logout) -> 
 			         
-			        // Note: This is just a TEST
+			        // Note: This is just a TEST that could be relevant if the sesson cookie was a cookie
+		            // to be stored by the Browser ( maxage > 0 )
 		            // The Session Cookie will still be present, because even after a Logout, 
 					// it will be created by Spring but with a new value :-)
-					logout.addLogoutHandler(cookies)
+					//logout.addLogoutHandler(cookies)
 			        
 					// Note: Not needed
 					//logout.deleteCookies("JSESSIONID")
 			  
-			       .permitAll()
+			       logout.permitAll()
 			);			
 
 		return http.build(); 

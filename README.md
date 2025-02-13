@@ -1,6 +1,6 @@
   # Spring Boot 3 MVC Security JSP JPA MySQL - Basic Starter
 
-Last updated: 12-02-2025
+Last updated: 13-02-2025
 
 - Works with Java 17
 
@@ -25,6 +25,8 @@ Last updated: 12-02-2025
 - Learning about Spring Cookies - Take a look at SpringCookieController.java
 
 - Learning about Servlet Cookies - Take a look at ServletCookieController.java
+
+- Try the Cookie functionality at the JSP view cookies.jsp
 
 - A simple JSP file included with links for menu navigation
 
@@ -72,6 +74,11 @@ http://localhost:8080
 
 - Add backend validation at the User Model
 
+# A small piece of learning
+
+When I created this Spring Boot Starter Web Application, I got inspired about Cookies in Java
+and created some functionality which can be tested like shown below
+
 # For learning about Spring Cookies try hit these public endpoints
  
 - http://localhost:8080/create-spring-cookie
@@ -90,6 +97,30 @@ http://localhost:8080
 - http://localhost:8080/all-servlet-cookies
 
 Happy Cookie learning :-)
+
+Note: For disable all the functionality about Cookies and have a pure Java Spring Boot 3 basic Starter delete the folowing:
+
+- SpringCookieController.java
+
+- ServletCookieController.java
+
+- cookies.jsp
+
+- Delete the link to the cookies.jsp view in the jsp view header_menu.jsp
+
+- At WebSecurityConfig.java delete the folowing endpoints
+
+"/create-spring-cookie",
+
+"/delete-spring-cookie",
+
+"/read-spring-cookie",
+
+"/create-servlet-cookie",
+
+"/delete-servlet-cookie",
+
+"/all-servlet-cookies",
 
 
 

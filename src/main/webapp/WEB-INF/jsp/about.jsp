@@ -18,7 +18,7 @@
  
 <h2>About this Web Application</h2>
 
-Last updated: 12-02-2025
+Last updated: 13-02-2025
 
 <ul>
 
@@ -64,6 +64,8 @@ CRUD functionality
 <li>
  Learning about Servlet Cookies - Take a look at ServletCookieController.java
 </li>
+
+<li>Try the Cookie functionality at the JSP view cookies.jsp</li>
 
 <li>
 A simple JSP file included with links for menu navigation
