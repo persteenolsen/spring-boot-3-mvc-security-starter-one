@@ -1,98 +1,122 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Spring Boot About this Web Application</title>
-	
-	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-    
-    <style>
-	   .body-content{font-size: 10pt;margin-left: 10pt; margin-right: 10pt; font-family: Verdana, sans-serif}
-	</style>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+    <!DOCTYPE html>
+    <html>
 
-</head>
-<body class="body-content">
+    <head>
+        <title>Spring Boot About this Web Application</title>
 
-    <jsp:include page="header_menu.jsp" />
- 
-<h2>About this Web Application</h2>
+        <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-Last updated: 13-02-2025
+        <!-- Bootstrap CSS -->
+        <link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'"
+            href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+            integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <noscript>
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+                integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+                crossorigin="anonymous">
+        </noscript>
 
-<ul>
+    </head>
 
-<li>
-   Works with Java 17
-</li>
+    <body>
 
-<li>
-    Spring Boot 3
-</li>
+        <br />
+        <jsp:include page="header_menu.jsp" />
 
-<li>
-    Spring Security
- </li>
+        <div class='container'>
+            <div class="row">
+                <div class="col-sm-6 offset-sm-3">
 
- <li>CSRF protection enabled</li>
+                    <h2>About this Web Application</h2>
 
-<li>
-   Maven as build tool
- </li>
+                    <br />
+                    
+                    Last updated: 16-09-2025
+                    
+                    <br /><br />
 
-<li>
-JSP
-</li>
+                    <ul>
 
-<li>
-JPA
-</li>
+                        <li>
+                            Works with Java 17
+                        </li>
 
-<li>
- MySQL
-</li>
+                        <li>
+                            Spring Boot 3
+                        </li>
 
-<li>
-CRUD functionality
-</li>
+                        <li>
+                            Spring Security
+                        </li>
+
+                        <li>CSRF protection enabled</li>
+
+                        <li>
+                            Maven as build tool
+                        </li>
+
+                        <li>
+                            JSP
+                        </li>
+
+                        <li>
+                            JPA
+                        </li>
+
+                        <li>
+                            MySQL
+                        </li>
+
+                        <li>
+                            CRUD functionality
+                        </li>
 
 
-<li>
- Learning about Spring Cookies - Take a look at SpringCookieController.java
-</li>
+                        <li>
+                            Learning about Spring Cookies - Take a look at SpringCookieController.java
+                        </li>
 
-<li>
- Learning about Servlet Cookies - Take a look at ServletCookieController.java
-</li>
+                        <li>
+                            Learning about Servlet Cookies - Take a look at ServletCookieController.java
+                        </li>
 
-<li>Try the Cookie functionality at the JSP view cookies.jsp</li>
+                        <li>Try the Cookie functionality at the JSP view cookies.jsp</li>
 
-<li>
-A simple JSP file included with links for menu navigation
-</li>
+                        <li>
+                            A simple JSP file included with links for menu navigation
+                        </li>
 
-<li>
- DevTools with Hot Reload when developing
-</li>
+                        <li>
+                            DevTools with Hot Reload when developing
+                        </li>
 
-<li>
-    The Web Applications is prepared to be deployed to Azure App Service using Java 17 and Tomcat 10.1
-</li>
-</ul>
+                        <li>
+                            The Web Applications is prepared to be deployed to Azure App Service using Java 17 and
+                            Tomcat 10.1
+                        </li>
+                    </ul>
 
-Things to do:
+                    Things to do:
 
-<ul>
-<li>
- Download or fork the source code from GitHub
-</li>
+                    <ul>
+                        <li>
+                            Download or fork the source code from GitHub
+                        </li>
 
-<li>
-Make sure that you have a MySQL Server online
-</li>
+                        <li>
+                            Make sure that you have a MySQL Server online
+                        </li>
 
-</ul>
+                    </ul>
 
-</div>
-</body>
-</html>
+
+
+                </div>
+            </div>
+        </div>
+
+    </body>
+
+    </html>

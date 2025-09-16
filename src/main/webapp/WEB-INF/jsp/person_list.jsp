@@ -17,18 +17,30 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
     
-    <style>
-	   .body-content{font-size: 10pt;margin-left: 10pt; margin-right: 10pt; font-family: Verdana, sans-serif}
-	</style>
+      		
+<!-- Bootstrap CSS -->
+<link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'"
+    href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<noscript>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</noscript>
   
 </head>
 
 
-<body class="body-content">
+<body>
  
-  <div>
-    
+     <br />
     <jsp:include page="header_menu.jsp" />
+ 
+      
+<div class='container'>
+	 <div class="row">
+            <div class="col-sm-6 offset-sm-3">
+
+             
 
     <h2>The List of Persons</h2>
 
@@ -66,7 +78,7 @@
   <spring:url value="/demo/mvccreateperson" var="addURL" />
   <a class="btn btn-primary" href="${addURL}" role="button" >Add New Person</a>
   
- </div>
+ </div></div></div>
 
 </body>
 </html>

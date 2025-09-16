@@ -1,6 +1,6 @@
   # Spring Boot 3 MVC Security JSP JPA MySQL - Basic Starter
 
-Last updated: 13-02-2025
+Last updated: 16-09-2025
 
 - Works with Java 17
 
@@ -14,7 +14,7 @@ Last updated: 13-02-2025
 
 - JSP
 
-- Basic mobile friendly and css
+- Basic mobile friendly by bootstrap css
 
 - JPA
 

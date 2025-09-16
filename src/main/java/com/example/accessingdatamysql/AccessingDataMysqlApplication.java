@@ -3,7 +3,7 @@ package com.example.accessingdatamysql;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
-// For deploy to Tomcat used with the "extends SpringBootServletInitializer"
+// For deploy to Tomcat used with the "extends" SpringBootServletInitializer"
 import org.springframework.boot.web.servlet.support.*;
 
 @SpringBootApplication
