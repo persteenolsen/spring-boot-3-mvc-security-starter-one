@@ -24,6 +24,7 @@
 
         <br />
         <jsp:include page="header_menu.jsp" />
+        <br />
 
         <div class='container'>
             <div class="row">
@@ -32,9 +33,9 @@
                     <h2>About this Web Application</h2>
 
                     <br />
-                    
+
                     Last updated: 16-09-2025
-                    
+
                     <br /><br />
 
                     <ul>
