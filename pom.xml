@@ -8,6 +8,10 @@
 		<version>3.3.0</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
+
+	<!--24-11-2025 - Delete the dir example in the local maven reposotory if errors accour when building
+	the war package: ~/.m2/repository  
+	-->
 	<groupId>com.example</groupId>
 	
 	<artifactId>accessing-data-mysql-complete-security-mvc-basic-starter</artifactId>

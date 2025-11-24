@@ -34,7 +34,7 @@
 
                     <br />
 
-                    Last updated: 08-10-2025
+                    Last updated: 24-11-2025
 
                     <br /><br />
 
